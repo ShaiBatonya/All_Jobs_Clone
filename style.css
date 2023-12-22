@@ -1,0 +1,337 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+    background-image: url(./hand_shake_42-65320380.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 75%;
+   
+
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family:normal small-caps normal 16px/1.4 Georgia;
+    
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*
+    10. Create a root font size to 10 pixels
+  */
+html {
+    font-size: 85.5%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* fonts styles - FOR THE FONTS FOR ELEMENTS IN THE DOCUMENT */
+
+
+    /* styles */
+
+
+/* --------------------------------------------------- */
+
+
+
+/* global styles - FOR THINGS THAT COMMON TO ALL DEVICES */
+
+.home_container {
+   margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* css of div i create for the two btn in the card */
+
+.div_btn {
+  display: flex;
+  gap: 5em;
+}
+
+.card-header {
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(154, 153, 150, 0.277);
+  
+}
+.card-footer {
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(154, 153, 150, 0.289);
+  
+}
+
+/* css of card job */
+
+.card {
+    background-color: rgba(164, 163, 161, 0.171);
+    margin-bottom: 1em;
+    width: 29em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-weight: bolder;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+    background-size: 220% auto;
+    -webkit-animation: pulse 3s 1;
+    animation: pulse512 2.5s 1;
+  }
+
+  @keyframes pulse512 {
+    0% {
+      box-shadow: 0 0 0 0 #05bada66;
+    }
+  
+    70% {
+      box-shadow: 0 0 0 10px rgba(42, 48, 134, 0);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 0 rgba(73, 226, 42, 0);
+    }
+  
+  };
+  
+  /* css of img company img */
+  
+  img {
+    width: 9em;
+    height: 9em;
+  }
+
+  /* from here is the loader css */
+
+  .loader {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bar {
+    position: relative;
+    top: 20em;
+    width: 10px;
+    height: 22px;
+    margin: 0 9px;
+    border-radius: 15px;
+    animation: loading_5192 1s ease-in-out infinite;
+    background-color: aqua;
+  }
+  
+  .bar:nth-child(1) {
+    animation-delay: 0.01s;
+  }
+  
+  .bar:nth-child(2) {
+    animation-delay: 0.09s;
+  }
+  
+  .bar:nth-child(3) {
+    animation-delay: 0.19s;
+  }
+  
+  .bar:nth-child(4) {
+    animation-delay: 0.29s;
+  }
+  
+  @keyframes loading_5192 {
+    0% {
+      transform: scale(1);
+      background-color: rgba(137, 43, 226, 0.341);
+    }
+  
+    20% {
+      transform: scale(1, 2.5);
+      background-color: rgba(100, 148, 237, 0.247);
+    }
+  
+    40% {
+      transform: scale(1);
+      background-color: rgba(100, 148, 237, 0.247);
+    }
+  }
+  
+  nav {
+    font-weight: bolder;
+    font-size: larger;
+    cursor: pointer;
+  }
+
+
+  .dropdown-item:hover {
+    color: #fecd03;
+  }
+
+  
+  button:hover {
+    background-position:bottom;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse513 1.5s infinite;
+  }
+
+  #link_btn:hover {
+    background-position:bottom;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse513 1.5s infinite;
+  }
+  
+  @keyframes pulse513 {
+    0% {
+      box-shadow: 0 0 0 0 #bada0566;
+    }
+  
+    70% {
+      box-shadow: 0 0 0 10px rgba(153, 215, 9, 0.189);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 0 rgba(147, 197, 9, 0);
+    }
+  }
+
+
+
+
+/* --------------------------------------------------- */
+
+
+/* _____________________________________________________MEDIA_QUERY_________________________________________________ */
+
+/* portrait mobile */
+@media (max-width: 47.9rem) and (orientation: portrait) {
+    /* styles */
+}
+
+/* ________________ */
+
+
+/* landscape mobile */
+@media (max-width: 94rem) and (orientation: landscape) {
+    /* styles */
+}
+
+/* ________________ */
+
+
+/* portrait tablets */
+@media (min-width: 48rem) and (max-width: 102.5rem) and (orientation: portrait) {
+    /* styles */
+}
+
+/* ________________ */
+
+
+/* landscape tablet & part of pc / leptop screens */
+
+@media (min-width: 94.1rem) and (max-width: 142.5rem) and (orientation: landscape) {
+    /* styles */
+}
+
+/* ______________________________________________ */
+
+
+/* rest of all pc / leptop screens */
+
+@media (min-width: 142.6rem) {
+
+}
+
+/* ________________________________ */
